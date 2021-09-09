@@ -1,0 +1,74 @@
+<section>
+  <h2>Notifications</h2>
+  <div class="switch">
+    <input type="checkbox" id="sw-1">
+    <label for="sw-1">Medication pending <em>(sent after 45min)</em></label>
+  </div>
+  <div class="switch">
+    <input type="checkbox" id="sw-2">
+    <label for="sw-2">Medication not taken <em>(sent after 90min)</em></label>
+  </div>
+  <div class="switch">
+    <input type="checkbox" id="sw-3">
+    <label for="sw-3">Device upside down</label>
+  </div>
+</section>
+
+<style>
+  .switch {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 40px;
+  }
+
+  .switch input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+  }
+
+  .switch label {
+    font-weight: 700;
+  }
+
+  .switch label em {
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .switch label::before,
+  .switch label::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  .switch label::before {
+    top: -2px;
+    left: 0;
+    width: 32px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .switch label::after {
+    top: 0px;
+    left: 2px;
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+  }
+
+  .switch input[type="checkbox"]:checked + label::before {
+    background-color: lime;
+  }
+  .switch input[type="checkbox"]:checked + label::after {
+    left: 13px;
+  }
+  .switch input[type="checkbox"]:focus + label {
+    text-decoration: underline;
+  }
+</style>

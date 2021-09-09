@@ -1,0 +1,67 @@
+<section>
+  <h2>Device status</h2>
+  <div class="tab-select" role="radiogroup">
+    <fieldset>
+      <legend>Device status options</legend>
+
+      <input type="radio" id="device-status-opt-1" name="device-status">
+      <label for="device-status-opt-1">Good</label>
+
+      <input type="radio" id="device-status-opt-2" name="device-status">
+      <label for="device-status-opt-2">Test</label>
+
+      <input type="radio" id="device-status-opt-3" name="device-status">
+      <label for="device-status-opt-3">Defect</label>
+
+      <input type="radio" id="device-status-opt-4" name="device-status">
+      <label for="device-status-opt-4">Scrapped</label>
+    </fieldset>
+  </div>
+</section>
+
+<style>
+  .tab-select {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    --radius: 12px;
+  }
+
+  .tab-select fieldset {
+    display: flex;
+    padding: 0;
+    border: 0;
+  }
+  .tab-select legend {
+    position: absolute;
+    clip: rect(0,0,0,0)
+  }
+
+  .tab-select label {
+    display: block;
+    padding: 8px 12px;
+    margin-right: -1px;
+    border: 1px solid darkgray;
+    background-color: lightgray;
+  }
+
+  .tab-select label:first-of-type {
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+  }
+  .tab-select label:last-of-type {
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+
+  .tab-select input[type="radio"] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+  }
+  .tab-select input[type="radio"]:focus + label {
+    text-decoration: underline;
+  }
+  .tab-select input[type="radio"]:checked + label {
+    background-color: palegreen;
+  }
+</style>
