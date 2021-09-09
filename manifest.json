@@ -1,0 +1,9 @@
+{
+  "short_name": "ui-elements",
+  "name": "UI Elements",
+  "description": "A collection of code snippets for UI Elements",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#FFFFFF",
+  "background_color": "#000000"
+}
