@@ -1,7 +1,17 @@
 <style>
   :root {
-    --color-green: rgb(76 217 100);
+    --color-red: rgb(255 59 48);
+    --color-green: rgb(56 199 89);
     --color-blue: rgb(0 122 255);
+    --color-yellow: rgb(255 204 0);
+
+    --color-gray: rgb(142 142 147);
+    --color-gray-2: rgb(174 174 178);
+    --color-gray-3: rgb(199 199 204);
+    --color-gray-4: rgb(209 209 214);
+
+    --color-bg: white;
+    --color-fg: black;
   }
 
   *,
@@ -13,6 +23,8 @@
   body {
     margin: 0;
     padding: 0;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
     font-family: sans-serif;
   }
 
@@ -29,6 +41,7 @@
       margin-top: 0;
       margin-bottom: 3rem;
     }
+
     h2 {
       margin-top: 0;
       margin-bottom: 1.25rem;
@@ -37,7 +50,7 @@
 
   .footer {
     margin-bottom: 1.25rem;
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--color-gray);
 
     ul {
       padding: 0 0 0 1.25rem;

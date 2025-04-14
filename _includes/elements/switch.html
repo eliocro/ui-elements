@@ -1,17 +1,17 @@
 <section>
   <h2>Notifications</h2>
 
-  <label class="switch" for="sw-1">
-    <input type="checkbox" id="sw-1"> Medication pending
+  <label class="switch">
+    <input type="checkbox" name="pending"> Medication pending
     <em>(sent after 45min)</em>
   </label>
 
-  <label class="switch" for="sw-2">
-    <input type="checkbox" id="sw-2"> Medication not taken <em>(sent after 90min)</em>
+  <label class="switch">
+    <input type="checkbox" name="not-taken"> Medication not taken <em>(sent after 90min)</em>
   </label>
 
-  <label class="switch" for="sw-3">
-    <input type="checkbox" id="sw-3"> Device upside down
+  <label class="switch">
+    <input type="checkbox" name="upside-down"> Device upside down
   </label>
 </section>
 
@@ -49,7 +49,7 @@
       left: 0;
       width: 2rem;
       height: 1.25rem;
-      background-color: gray;
+      background-color: var(--color-gray);
       border-radius: 0.675rem;
       transition: background-color 0.3s ease;
     }
