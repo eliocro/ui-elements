@@ -1,10 +1,10 @@
 <section>
   <h2>Device status</h2>
 
-  <fieldset class="tab-select">
+  <fieldset class="segmented-control">
     <legend>Device status options</legend>
     <label>
-      <input type="radio" name="device-status"> Good
+      <input type="radio" name="device-status" checked> Good
     </label>
     <label>
       <input type="radio" name="device-status"> Test
@@ -19,18 +19,18 @@
 </section>
 
 <style>
-  .tab-select {
-    --radius: 0.5rem;
-    --padding: 0.25rem;
+  .segmented-control {
+    --radius: 1rem;
+    --padding: 0.125rem;
+    --border: 2px;
 
     display: flex;
     width: fit-content;
     margin: 0;
     padding: var(--padding);
 
-    border: none;
-    border-radius: calc(var(--radius) + var(--padding));
-    background-color: var(--color-gray-4);
+    border: var(--border) solid var(--color-yellow);
+    border-radius: calc(var(--radius) + var(--padding) + var(--border));
 
     &:has(:focus-visible) {
       outline: 2px solid var(--color-blue);
